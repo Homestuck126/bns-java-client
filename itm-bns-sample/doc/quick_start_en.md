@@ -118,29 +118,7 @@ Execute the program to start doing ledgerInput
 
 ### 5. Check the result
 
-After executing the sample code. The BNS Java Client will start ledgerinput. You can check the result of ledgerinput on BNS Website.
-
-1. Use your Web Browser to open [BNS Website](https://azure-dev-membership.itm.monster:8088/)
-
-2. Click the Check Records then you can check all of your ledgerinput records
-
-3. Click '+' in one of your legerinput records then you can view the information about ledgerinput.
-
-4. If your data is On-Chain, the Attest status icon will become green and show Success. Otherwise, it will be gray and show Waiting. The default setting of BNS Server is clearance once a day.
-
-5. If your data is On-Chain, you can click On-chain Proof icon to view the proof on blockchain via blockchain browser.
-
-6. If your data is Off-Chain, you can click Off-chain Proof icon to download the proof and use our Verification Website or Verification Program SDK to verify this data whether be tampered.
-
-7. Click the verification icon
-
-8. Click Blockchain verification
-
-9. Upload the Off-chain proof your downloaded
-
-10. If Off-Chain proof is tempered-free, the Verify Result icon will become green, otherwise, it will be red.
-
-
+After excuting the sample code. The BNS Client will do ledgerinput. You can login and check the result of the ledgerinput on the Blockchain Notary Service website. For instructions on BNS operations one can go to YouTube to watch the instructional video Blockchain Notary Service Playlist.
 ----
 Quickstart is now complete. Next, we learn how to build our own CMD.
 
