@@ -117,8 +117,7 @@ Execute the program to start doing ledgerInput
 5. right click `itm-bns-sample-1.1.1-SNAPSHOT.jar` and click run `itm-bns-sample-1.1.1-SNAPSHOT.jar`
 
 ### 5. Check the result
-
-After excuting the sample code. The BNS Client will do ledgerinput. You can login and check the result of the ledgerinput on the Blockchain Notary Service website. For instructions on BNS operations one can go to YouTube to watch the instructional video Blockchain Notary Service Playlist.
+after executing the sample code, the BNS client will do ledgerinput. You can login and check the result of the ledgerinput on the [Blockchain Notary Service website](https://bns.itrustmachines.com/). For instructions on BNS operations one can go to Youtube to watch the instructional [playlist](https://youtube.com/playlist?list=PL9mBKnNjNC1K0XiH9EL65QljN6Agf4k42).
 ----
 Quickstart is now complete. Next, we learn how to build our own CMD.
 
