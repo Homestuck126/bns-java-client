@@ -2,8 +2,8 @@
 
 ### About the Callback
 
-The Callbacks send the API events which occurs between BNS Client and BNS Server to your system. We define 7 events that you can callback. We will introduce these Callbacks in the following document.
-You can go through BNS API Doc [here](https://azure-dev-membership.itm.monster/api)
+The Callbacks send the API events which occurs between BNS Client and BNS Server to your system. We define 7 events that you can Callback. We will introduce these Callbacks in the following document.
+You can go through BNS API Doc [here](https://bns.itrustmachines.com/api).
 
 ### Prerequisites
 - Complete quickstarts document
@@ -11,24 +11,24 @@ You can go through BNS API Doc [here](https://azure-dev-membership.itm.monster/a
 
 ### Events
 
-1. `register` : When initialize the BNS Client, BNS Client will send `registerRequest` to BNS Server and receive `registerResult` from BNS Server. Developers can implement the code in `register` method to callback the information in `registerRequest` and `registerResult`.
+1. `register` : When the BNS Client initalizes, the BNS Client will send `registerRequest` to the BNS Server and receive `registerResult` from the BNS Server. Developers can implement the code in `register` method to Callback the information in `registerRequest` and `registerResult`.
 
-2. `createLedgerInputByCmd` : After successfully initializing the BNS Client, BNS Client will store CMD and other data in `ledgerInputRequest` and do **ledgerInput** to send `ledgerInputRequest` to the BNS Server. Developers can implement the code in `createLedgerInputByCmd` method to callback the information in `ledgerInputRequest`.
+2. `createLedgerInputByCmd` : After successfully initializing the BNS Client, BNS Client will store CMD and other data in `ledgerInputRequest` and do **ledgerInput** to send `ledgerInputRequest` to the BNS Server. Developers can implement the code in `createLedgerInputByCmd` method to Callback the information in `ledgerInputRequest`.
 
-3. `obtainLedgerInputResponse` : BNS Client will receive `ledgerInputResponse` from BNS Server after sending `ledgerInputRequest`. Developers can implement the code in `obtainLedgerInputResponse` method to callback the information in `ledgerInputResponse`.
+3. `obtainLedgerInputResponse` : The BNS Client will receive `ledgerInputResponse` from the BNS Server after sending `ledgerInputRequest`. Developers can implement the code in `obtainLedgerInputResponse` to Callback the information in `ledgerInputResponse`.
 
-4. `obtainReceiptEvent` : The `receipt` is contained in `ledgerInputResponse`. Developers can implement the code in `obtainReceiptEvent` method to callback the information in `receipt`.
+4. `obtainReceiptEvent` : The `receipt` is contained in `ledgerInputResponse`. Developers can implement the code in `obtainReceiptEvent` to Callback the information in `receipt`.
 
-5. `obtainDoneClearanceOrderEvent` : The `doneClearanceOrder` is contained in `ledgerInputResponse`. BNS Client will use `doneClearanceOrder` to find out which receipts need to be verified. Developers can implement the code in `obtainDoneClearanceOrderEvent` method to callback the information in `doneClearanceOrder`.
+5. `obtainDoneClearanceOrderEvent` : The `doneClearanceOrder` is contained in `ledgerInputResponse`. The BNS Client will use `doneClearanceOrder` to find out which receipts need to be verified. Developers can implement the code in `obtainDoneClearanceOrderEvent` to Callback the information in `doneClearanceOrder`.
 
-6. `obtainMerkleProof` : Before verifying the receipt, BNS Client will request the `merkleProof` of those to be verified receipts from the Server. The Merkle Proof is evidence of receipt verification. BNS Client will use Merkle proof to verify the receipt whether receipt is in the TP-merkle tree. Developers can implement the code in `obtainMerkleProof` method to callback the information in `merkleProof`.
+6. `obtainMerkleProof` : Before verifying the receipt, the BNS Client will request the `merkleProof` of not yet verified receipts from the Server. The Merkle Proof is evidence of receipt verification. The BNS Client will use the Merkle proof to verify whether receipt is in the TP-merkle tree. Developers can implement the code in `obtainMerkleProof` to Callback the information in `merkleProof`.
 
-7. `getVerifyReceiptResult` : After receiving the Merkle Proof. BNS Client will start to verify the receipt and store the result to `verifyReceiptResult`. Developers can implement the code in `getVerifyReceiptResult` method to callback the information in `verifyReceiptResult`.
+7. `getVerifyReceiptResult` : After receiving the Merkle Proof. The BNS Client will start to verify the receipt and store the result to `verifyReceiptResult`. Developers can implement the code in `getVerifyReceiptResult`  to Callback the information in `verifyReceiptResult`.
 
 
 ### register
 
-**When initialize the BNS Client, BNS Client will send `registerRequest` to BNS Server and receive `registerResult` from BNS Server. Developers can implement the code in `register` callback method to callback the `registerRequest` and `registerResult`.**
+**When initializing the BNS Client, the BNS Client will send `registerRequest` to the BNS Server and receive `registerResult` from the BNS Server. Developers can implement the code in the `register` Callback method to Callback the `registerRequest` and `registerResult`.**
 
 - [RegisterRequest.java](../../bns-client/src/main/java/com/itrustmachines/client/register/vo/RegisterRequest.java)
 
@@ -50,7 +50,7 @@ You can go through BNS API Doc [here](https://azure-dev-membership.itm.monster/a
 
 ### createLedgerInputByCmd
 
-**After successfully initializing the BNS Client, BNS Client will store CMD and other attestation data in `ledgerInputRequest` and do ledgerInput to send `ledgerInputRequest` to the BNS Server. Developers can implement the code in `createLedgerInputByCmd` method to callback the `ledgerInputRequest`.**
+**After successfully initializing the BNS Client, the BNS Client will store the CMD and other attestation data in `ledgerInputRequest` and do ledgerInput to send `ledgerInputRequest` to the BNS Server. Developers can implement the code in `createLedgerInputByCmd` to Callback the `ledgerInputRequest`.**
 
 - [LedgerInputRequest.java](../../bns-client/src/main/java/com/itrustmachines/client/input/vo/LedgerInputRequest.java)
   ```java
@@ -66,7 +66,7 @@ You can go through BNS API Doc [here](https://azure-dev-membership.itm.monster/a
   ```
 
 - [CallbackSample.java](../src/main/java/com/itrustmachines/sample/CallbackSample.java)
-  We recommend you to store `indexValue` and `clearanceOrder` in `receiptLocator` so that you can search your records conveniently.
+  We recommend you store `indexValue` and `clearanceOrder` in `receiptLocator` so that you can search your records conveniently.
 
   ```java
   public void createLedgerInputByCmd(ReceiptLocator receiptLocator, LedgerInputRequest ledgerInputRequest) {
@@ -75,7 +75,7 @@ You can go through BNS API Doc [here](https://azure-dev-membership.itm.monster/a
 
 ### obtainLedgerInputResponse
 
-**BNS Client will receive `ledgerInputResponse` from BNS Server after sending `ledgerInputRequest`. Developers can implement the code in `obtainLedgerInputResponse` method to callback the `ledgerInputResponse`.**
+**The BNS Client will receive `ledgerInputResponse` from the BNS Server after sending `ledgerInputRequest`. Developers can implement the code in `obtainLedgerInputResponse` to Callback the `ledgerInputResponse`.**
 
 - [LedgerInputResponse.java](../../bns-client/src/main/java/com/itrustmachines/client/input/vo/LedgerInputResponse.java)
   ```java
@@ -88,7 +88,7 @@ You can go through BNS API Doc [here](https://azure-dev-membership.itm.monster/a
   ```
 
 - [CallbackSample.java](../src/main/java/com/itrustmachines/sample/CallbackSample.java)
-  We recommend you to store `indexValue` and `clearanceOrder` in `receiptLocator` so that you can search your records conveniently.
+  We recommend you store `indexValue` and `clearanceOrder` in `receiptLocator` so that you can search your records conveniently.
   ```java
   public void obtainLedgerInputResponse(ReceiptLocator locator, String cmdJson,
       LedgerInputResponse ledgerInputResponse) {
@@ -97,7 +97,7 @@ You can go through BNS API Doc [here](https://azure-dev-membership.itm.monster/a
 
 ### obtainReceiptEvent
 
-**The `receipt` is contained in `ledgerInputResponse`. Developers can implement the code in `obtainReceiptEvent` method to callback the `receipt`.**
+**The `receipt` is contained in `ledgerInputResponse`. Developers can implement the code in `obtainReceiptEvent` to Callback the `receipt`.**
 
 - [Receipt.java](../../spo-common-domain-objects/src/main/java/com/itrustmachines/common/vo/Receipt.java)
   ```java
@@ -116,7 +116,7 @@ You can go through BNS API Doc [here](https://azure-dev-membership.itm.monster/a
   ```
 - [CallbackSample.java](../src/main/java/com/itrustmachines/sample/CallbackSample.java)
   
-  We recommend you to store `indexValue` and `clearanceOrder` in `receiptLocator` so that you can search your records conveniently.
+  We recommend you store `indexValue` and `clearanceOrder` in `receiptLocator` so that you can search your records conveniently.
   ```java
   public void obtainReceiptEvent(ReceiptEvent receiptEvent) {
   }
@@ -124,7 +124,7 @@ You can go through BNS API Doc [here](https://azure-dev-membership.itm.monster/a
 
 ### obtainDoneClearanceOrderEvent
 
-**The `doneClearanceOrder` is contained in `ledgerInputResponse` . BNS Client will use `doneClearanceOrder` to find out which receipts need to be verified. Developers can implement the code in `obtainDoneClearanceOrderEvent` method to callback the `doneClearanceOrder`.**
+**The `doneClearanceOrder` is contained in `ledgerInputResponse` . The BNS Client will use `doneClearanceOrder` to find out which receipts need to be verified. Developers can implement the code in `obtainDoneClearanceOrderEvent` to Callback the `doneClearanceOrder`.**
 
 
 - [DoneClearanceOrderEvent.java](../../bns-client/src/main/java/com/itrustmachines/client/verify/vo/DoneClearanceOrderEvent.java)
@@ -145,7 +145,7 @@ You can go through BNS API Doc [here](https://azure-dev-membership.itm.monster/a
 
 ### obtainMerkleProof
 
-**Before verifying the receipt, BNS Client will request the `merkleProof` of those to be verified receipts from the Server. The Merkle Proof is evidence of receipt verification. BNS Client will use Merkle proof to verify the receipt whether receipt is in the TP-merkle tree. Developers can implement the code in `obtainMerkleProof` method to callback the `merkleProof`.**
+**Before verifying the receipt, the BNS Client will request the `merkleProof` of to be verified receipts from the Server. The Merkle Proof is evidence of receipt verification. The BNS Client will use Merkle proof to verify whether the receipt is in the TP-merkle tree. Developers can implement the code in `obtainMerkleProof` to Callback the `merkleProof`.**
 
 - [MerkleProof.java](../../spo-common-domain-objects/src/main/java/com/itrustmachines/common/vo/MerkleProof.java)
 
@@ -167,7 +167,7 @@ You can go through BNS API Doc [here](https://azure-dev-membership.itm.monster/a
 
 ### getVerifyReceiptResult
 
-**After receiving the Merkle Proof. BNS Client will start to verify the receipt and store the result to `verifyReceiptResult`. Developers can implement the code in `getVerifyReceiptResult` method to callback the `verifyReceiptResult`.**
+**After receiving the Merkle Proof, the BNS Client will start to verify the receipt and store the result to `verifyReceiptResult`. Developers can implement the code in `getVerifyReceiptResult` to Callback the `verifyReceiptResult`.**
 
 - [VerifyReceiptAndMerkleProofResult.java](../../spo-common-verification/src/main/java/com/itrustmachines/verification/vo/VerifyReceiptAndMerkleProofResult.java)
 
@@ -209,7 +209,7 @@ You can go through BNS API Doc [here](https://azure-dev-membership.itm.monster/a
   ```
 
 ----
-Build the Callback Applications document is now complete. Next, learn how to build the ReceiptDao Applications
+Building the Callback Application document is now complete. Next, we learn how to build the ReceiptDao Application.
 
 ## Next Steps
 
