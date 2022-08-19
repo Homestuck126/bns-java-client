@@ -2,7 +2,7 @@
 
 ### About the CMD
 
-CMD is a data you want to attest to blockchain by BNS Server. CMD is also part of ledgerinput. the BNS Java Client send the ledgerinput to BNS Server and the BNS Server will automatically upload the fingerprint of the ledgerinput to blockchain. Developers should build their own CMD so that they can use our BNS service. There are two scenarios to build the CMD:
+CMD is the data you want to attest to blockchain by BNS Server. CMD is also part of ledgerinput. The BNS Java Client sends the ledgerinput to the BNS Server and the BNS Server will automatically upload the fingerprint of the ledgerinput to the blockchain. Developers should build their own CMD so that they can use our BNS service. There are two scenarios to build the CMD:
 
 1. [Text Attestation](#text-attestation) : Learn how to build CMD in JSON data type.
 
@@ -14,7 +14,7 @@ CMD is a data you want to attest to blockchain by BNS Server. CMD is also part o
 
 ### Suggestion
 
-- We highly recommend that you build the CMD in JSON data type
+- We highly recommend that you build the CMD as a JSON data type.
 
 ### Text Attestation
 
