@@ -15,7 +15,7 @@ Depending on your operating system, our SDK supports several development environ
 
 - IntelliJ IDEA
 
-The quickstarts are intended to guide you through the steps to install the software that SDK will need, configure the settings for Sample Code, and check the result after doing ledgerinput. Quick starts involved following steps:
+The quickstarts are intended to guide you through the steps to install the software that the SDK will need, configure the settings for Sample Code, and check the result after doing ledgerinput. The quickstarts involve the follwing steps:
 
 <!-- no toc -->
 1. [Download the BNS JAVA Client SDK](#1-download-the-sdk)
@@ -36,15 +36,15 @@ To download the code, you will need to install [git](https://docs.github.com/en/
 
 ### 2. Install packages required to SDK
 
-Before you run the SDK, you need to add required packages to your computer if they are not already installed. Depending on your operating systems, enter the following commands in terminal. You may omit packages that are already installed but make sure your java version is higher than 8, you can type `java --version` in terminal to check.
+Before you run the SDK, you need to add the required packages to your computer if they are not already installed. Depending on your operating systems, enter the following commands in terminal. You may omit packages that are already installed but make sure your java version is higher than 8, you can type `java --version` in terminal to check.
 
-- Please refer to [Java official website](https://www.oracle.com/java/technologies/javase-downloads.html) to install or upgrade the Java
+- Please refer to [Java official website](https://www.oracle.com/java/technologies/javase-downloads.html) to install or upgrade the Java.
 
-- Please refer to [Maven official website](https://maven.apache.org) to install or upgrade the Maven
+- Please refer to [Maven official website](https://maven.apache.org) to install or upgrade the Maven.
 
 ### 3. Configure the settings for Sample Code
 
-This configuration file is very important. Main program use this configuration file to initialize the BNS Java Client. Configuration file includes private key, blockchain address, Email setting ... etc.
+This configuration file is very important. The main program use this configuration file to initialize the BNS Java Client. The configuration file includes private key, blockchain address, Email settings ... etc.
 
 Modifying the configuration file require the following prerequisites:
 
@@ -52,7 +52,7 @@ Modifying the configuration file require the following prerequisites:
 
 2. Rinkeby Blockchain Node URL : In order to get the On-Chain proof, we need to access the node of blockchain. We use Rinkeby blockchain for our testing environment. The Rinkeby blockchain node URL can obtain via Infura. Please check the [Infura tutorial](./infura_en.md) to get the Rinkey Node URL.
 
-After obtaining the private key and Rinkeby Node URL, then you will be ready to modify the configuration file [sample.properties](../src/main/resources/sample.properties). Please check the file and follow the instructions in file or below.
+After obtaining the private key and Rinkeby Node URL, you will be ready to modify the configuration file [sample.properties](../src/main/resources/sample.properties). Please check the file and follow the instructions in the file or below.
 
 ```Java
 /**
