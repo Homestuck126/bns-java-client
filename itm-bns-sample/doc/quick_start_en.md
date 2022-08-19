@@ -142,7 +142,7 @@ After executing the sample code. The BNS Java Client will start ledgerinput. You
 
 
 ----
-Quickstarts is now complete. Next, learn how to build your own CMD.
+Quickstart is now complete. Next, we learn how to build our own CMD.
 
 ## Next Steps
 
