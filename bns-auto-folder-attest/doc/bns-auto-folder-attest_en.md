@@ -2,7 +2,7 @@
 
 ### About BNS Auto Folder Attest
 
-BNS auto folder attest allows developers attest each files in specific folder. This tutorial document will guide you through steps to configure and run the auto folder attest service. 
+The BNS auto folder attest allows developers to attest every file in a specific folder. This tutorial document will guide you through steps to configure and run the auto folder attest service. 
 
 <!-- no toc -->
 1. [Configure setting for Sample Code](#1-configure-the-settings-for-sample-code)
@@ -22,7 +22,7 @@ Complete the tutorial for each step, then you will be ready to develop auto fold
 
 ### 1. Configure the settings for auto folder attest service
 
-This configuration file is very important. Main program use this configuration file to initialize the BNS auto folder attest service.
+This configuration file is very important. The main program uses this configuration file to initialize the BNS auto folder attest service.
 Please follow the instructions and configure the setting.
 
 ```Java
@@ -73,10 +73,10 @@ Move to itm-bns-sample folder
 > chmod u+x mvnw
 ```
 
-Execute the program and Enter the private key and PIN code. BNS auto folder attest will use PIN code to encrypt your private key and store in `.itm.encrypted.private.key`.
-After the first time you executing the code, the BNS auto folder attest will ask you to enter the PIN code to unlock your private key.
+Execute the program and enter the private key and PIN code. BNS auto folder attest will use the PIN code to encrypt your private key and store in `.itm.encrypted.private.key`.
+After the first time you execute the code, the BNS auto folder attest will ask you to enter the PIN code to unlock your private key.
 Private Key : Export from you MetaMask Account
-PIN code : At least 8 character or number
+PIN code : At least 8 characters or numbers
 
 ```shell
 > ./mvnw.cmd clean package -DskipTests
@@ -86,8 +86,8 @@ PIN code : At least 8 character or number
 
 ### 3. BNS Auto Folder Attest Callback
 
-We already define 7 callback methods in BNS Java Client documents. Now, we are going to introduce another 7 callback methods in BNS Auto Folder Attest service.
-In this callback tutorial, the callback output will be saved as CSV file. You can implement the code in each callback method to integrate with your applications after finishing this tutorial.
+We already defined 7 Callback methods in the BNS Java Client documents. Now, we are going to introduce another 7 Callback methods in BNS Auto Folder Attest service.
+In this Callback tutorial, the Callback output will be saved as a CSV file. You can implement the code in each Callback method to integrate with your applications after finishing this tutorial.
 
 - [ScanResult.java](../src/main/java/com/itrustmachines/bnsautofolderattest/vo/ScanResult.java)
     ```java
@@ -101,7 +101,7 @@ In this callback tutorial, the callback output will be saved as CSV file. You ca
       public ZonedDateTime endTime;
     }
     ```
-1. `onScanResult` : This callback allows BNS Auto Folder Attest service return the `scanResult` after finish scanning the file and `onScanResult` callback will store in the `scanHistoryCsvPath.CSV`
+1. `onScanResult` : This Callback allows the BNS Auto Folder Attest service to return the `scanResult` after finishing scanning the file. The `onScanResult` Callback will be stored in the `scanHistoryCsvPath.CSV`
 
 - [CallbackImpl.java](../src/main/java/com/itrustmachines/bnsautofolderattest/service/CallbackImpl.java)
 
@@ -113,8 +113,8 @@ In this callback tutorial, the callback output will be saved as CSV file. You ca
   ```
 
 
-In BNS Auto Folder Attest service, each file in folder will be scanned and ledgerinput to BNS server to attest. BNS Auto Folder Attest service will call `onScanResult` callback to return scan result method after finish scanning entire folder and build the `scanResult`.
-After BNS server attest the file, it will return the `ledgerInputResponse`. Then BNS auto folder attest service will build the `attestationRecord` by the `ledgerInputResponse`.
+In the BNS Auto Folder Attest service, each file in the folder will be scanned and ledgerinput to the BNS server to attest. After finishing scanning the entire folder and building the `scanResult`. The BNS Auto Folder Attest service will call the `onScanResult` Callback to return the scan result method.
+After the BNS server attests the file, it will return the `ledgerInputResponse`. Then the BNS auto folder attest service will build the `attestationRecord` by the `ledgerInputResponse`.
 
 - [attestationRecord.java](../src/main/java/com/itrustmachines/bnsautofolderattest/vo/AttestationRecord.java)
 
@@ -158,7 +158,7 @@ After BNS server attest the file, it will return the `ledgerInputResponse`. Then
     ```
 
 
-2. `onAttested` : This callback allows BNS Auto Folder Attest service return the `attestationRecord` when file attested successfully. 
+2. `onAttested` : This callback allows the BNS Auto Folder Attest service to return the `attestationRecord` when the file is attested successfully. 
 
 - [CallbackImpl.java](../src/main/java/com/itrustmachines/bnsautofolderattest/service/CallbackImpl.java)
 
@@ -169,7 +169,7 @@ After BNS server attest the file, it will return the `ledgerInputResponse`. Then
   }
   ```
 
-3. `onAttestFail` : This callback allows BNS Auto Folder Attest service return the `attestationRecord` when file attested fail.
+3. `onAttestFail` : This callback allows the BNS Auto Folder Attest service to return the `attestationRecord` when file attestation fails.
     
     ```java
     public void onAttestFail(@NonNull final AttestationRecord attestationRecord) {
@@ -178,7 +178,7 @@ After BNS server attest the file, it will return the `ledgerInputResponse`. Then
     }
     ```
 
-4. `onVerified` : This callback is extended from `getVerifyReceiptResult` and allows BNS Auto Folder Attest service return the `attestationRecord` after verifying the receipt successfully. 
+4. `onVerified` : This Callback is extended from `getVerifyReceiptResult` and allows the BNS Auto Folder Attest service to return the `attestationRecord` after verifying the receipt successfully. 
   
    ```java
    @SneakyThrows
@@ -189,7 +189,7 @@ After BNS server attest the file, it will return the `ledgerInputResponse`. Then
    }
    ```
 
-5. `onVerifyFail` : This callback is extended from `getVerifyReceiptResult` and allows BNS Auto Folder Attest service return the `attestationRecord` after verifying the receipt fail.
+5. `onVerifyFail` : This Callback is extended from `getVerifyReceiptResult` and allows the BNS Auto Folder Attest service to return the `attestationRecord` after verifying the receipt fails.
     
     ```java
     @Override
@@ -198,7 +198,7 @@ After BNS server attest the file, it will return the `ledgerInputResponse`. Then
         writeHistory(attestationRecord);
     }
     ```
-6. `onSaveProof` : This callback is extended from `getVerifyReceiptResult` and allows BNS Auto Folder Attest service return the `attestationRecord` after requesting and saving the verification proof successfully
+6. `onSaveProof` : This Callback is extended from `getVerifyReceiptResult` and allows BNS Auto Folder Attest service to return the `attestationRecord` after requesting and saving the verification proof successfully.
 
     ```java
     @Override
@@ -208,7 +208,7 @@ After BNS server attest the file, it will return the `ledgerInputResponse`. Then
     }
     ```
 
-7. `onSaveFail` : This callback is extended from `getVerifyReceiptResult` and allows BNS Auto Folder Attest service return the `attestationRecord` after requesting and saving the verification proof fail
+7. `onSaveFail` : This Callback is extended from `getVerifyReceiptResult` and allows BNS Auto Folder Attest service to return the `attestationRecord` after requesting and saving the verification proof fails.
     
     ```java
     @Override
