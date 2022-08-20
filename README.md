@@ -19,7 +19,7 @@ The quickstarts are intended to guide you through the steps to install packages 
 - [Run the Sample code](itm-bns-sample/doc/quick_start_en.md#4-run-the-sample-code)
 - [Check the result](itm-bns-sample/doc/quick_start_en.md#5-check-the-result)
 
-Complete the quickstarts for each step, then you will be ready to run the tutorial and develop our BNS Java Client with your own applications.
+Complete the quickstart for each step, then you will be ready to run the tutorial and develop your own applications with our BNS Java Client.
 
 ### Tutorials
 
