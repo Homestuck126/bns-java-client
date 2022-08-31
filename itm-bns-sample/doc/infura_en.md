@@ -4,14 +4,12 @@
 
 2. Login to [Infura](https://infura.io/login)
 
-3. Click ETHEREUM in the left side bar
+3. Click CREATE NEW KEY on the top right. 
    ![](../image/ethereum.png)
 
-4. Click CREATE NEW PROJECT
+4. select web 3 API and give it a name, then click CREATE.
    ![](../image/create_new_project.png)
 
-5. Enter project name，and click CREATE
-   ![](https://i.imgur.com/26dhmMa.png)
-
-6. Choose Rinkey in ENDPOINTS MENU，and copy the URL and paste to `nodeURL` columns which in the configuration file [sample.properties](../src/main/resources/sample.properties)
+6. Choose Rinkey in ENDPOINTS MENU by clicking on the dropdown for ETHEREUM. 
+7. Copy the URL and paste to `nodeURL` columns which in the configuration file [sample.properties](../src/main/resources/sample.properties)
    ![](../image/copy_url.png)
