@@ -13,4 +13,4 @@
 6. Choose Rinkey in ENDPOINTS MENU by clicking on the dropdown for ETHEREUM. ![](../image/Rinkeby.PNG)
 
 8. Copy the URL and paste to `nodeURL` columns which in the configuration file [sample.properties](../src/main/resources/sample.properties)
-   ![](../image/copy_url.png)
+   ![](../image/url_copy.png)
