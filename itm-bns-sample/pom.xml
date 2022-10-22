@@ -22,7 +22,7 @@
         <revision>1.1.1-SNAPSHOT</revision>
 
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-        <lombok.version>1.18.16</lombok.version>
+        <lombok.version>1.18.22</lombok.version>
 
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
         <commons-lang3.version>3.11</commons-lang3.version>
@@ -189,12 +189,12 @@
 
         <repository>
             <id>kuro-nexus-releases</id>
-            <url>http://itm-kuro.itm.monster:8081/repository/maven-releases</url>
+            <url>https://itm-registry.itm.monster:8281/repository/maven-releases/</url>
         </repository>
 
         <repository>
             <id>kuro-nexus-snapshots</id>
-            <url>http://itm-kuro.itm.monster:8081/repository/maven-snapshots</url>
+            <url>https://itm-registry.itm.monster:8281/repository/maven-snapshots/</url>
         </repository>
     </repositories>
 
@@ -208,7 +208,7 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
-<!--
+            <!--
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
@@ -238,8 +238,7 @@
                                 </filter>
                             </filters>
                             <transformers>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>com.itrustmachines.sample.BnsClientSample</mainClass>
                                 </transformer>
                             </transformers>
