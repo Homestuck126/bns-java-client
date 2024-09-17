@@ -15,7 +15,7 @@ Depending on your operating system, our SDK supports several development environ
 
 - IntelliJ IDEA
 
-The quickstarts are intended to guide you through the steps to install the software that SDK will need, configure the settings for Sample Code, and check the result after doing ledgerinput. Quick starts involved following steps:
+The quickstarts are intended to guide you through the steps to install the software that the SDK will need, configure the settings for Sample Code, and check the result after doing ledgerinput. The quickstarts involve the follwing steps:
 
 <!-- no toc -->
 1. [Download the BNS JAVA Client SDK](#1-download-the-sdk)
@@ -36,15 +36,15 @@ To download the code, you will need to install [git](https://docs.github.com/en/
 
 ### 2. Install packages required to SDK
 
-Before you run the SDK, you need to add required packages to your computer if they are not already installed. Depending on your operating systems, enter the following commands in terminal. You may omit packages that are already installed but make sure your java version is higher than 8, you can type `java --version` in terminal to check.
+Before you run the SDK, you need to add the required packages to your computer if they are not already installed. Depending on your operating systems, enter the following commands in terminal. You may omit packages that are already installed but make sure your java version is higher than 8, you can type `java --version` in terminal to check.
 
-- Please refer to [Java official website](https://www.oracle.com/java/technologies/javase-downloads.html) to install or upgrade the Java
+- Please refer to [Java official website](https://www.oracle.com/java/technologies/javase-downloads.html) to install or upgrade the Java.
 
-- Please refer to [Maven official website](https://maven.apache.org) to install or upgrade the Maven
+- Please refer to [Maven official website](https://maven.apache.org) to install or upgrade the Maven.
 
 ### 3. Configure the settings for Sample Code
 
-This configuration file is very important. Main program use this configuration file to initialize the BNS Java Client. Configuration file includes private key, blockchain address, Email setting ... etc.
+This configuration file is very important. The main program use this configuration file to initialize the BNS Java Client. The configuration file includes private key, blockchain address, Email settings ... etc.
 
 Modifying the configuration file require the following prerequisites:
 
@@ -52,7 +52,7 @@ Modifying the configuration file require the following prerequisites:
 
 2. Rinkeby Blockchain Node URL : In order to get the On-Chain proof, we need to access the node of blockchain. We use Rinkeby blockchain for our testing environment. The Rinkeby blockchain node URL can obtain via Infura. Please check the [Infura tutorial](./infura_en.md) to get the Rinkey Node URL.
 
-After obtaining the private key and Rinkeby Node URL, then you will be ready to modify the configuration file [sample.properties](../src/main/resources/sample.properties). Please check the file and follow the instructions in file or below.
+After obtaining the private key and Rinkeby Node URL, you will be ready to modify the configuration file [sample.properties](../src/main/resources/sample.properties). Please check the file and follow the instructions in the file or below.
 
 ```Java
 /**
@@ -117,32 +117,9 @@ Execute the program to start doing ledgerInput
 5. right click `itm-bns-sample-1.1.1-SNAPSHOT.jar` and click run `itm-bns-sample-1.1.1-SNAPSHOT.jar`
 
 ### 5. Check the result
-
-After executing the sample code. The BNS Java Client will start ledgerinput. You can check the result of ledgerinput on BNS Website.
-
-1. Use your Web Browser to open [BNS Website](https://azure-dev-membership.itm.monster:8088/)
-
-2. Click the Check Records then you can check all of your ledgerinput records
-
-3. Click '+' in one of your legerinput records then you can view the information about ledgerinput.
-
-4. If your data is On-Chain, the Attest status icon will become green and show Success. Otherwise, it will be gray and show Waiting. The default setting of BNS Server is clearance once a day.
-
-5. If your data is On-Chain, you can click On-chain Proof icon to view the proof on blockchain via blockchain browser.
-
-6. If your data is Off-Chain, you can click Off-chain Proof icon to download the proof and use our Verification Website or Verification Program SDK to verify this data whether be tampered.
-
-7. Click the verification icon
-
-8. Click Blockchain verification
-
-9. Upload the Off-chain proof your downloaded
-
-10. If Off-Chain proof is tempered-free, the Verify Result icon will become green, otherwise, it will be red.
-
-
+after executing the sample code, the BNS client will do ledgerinput. You can login and check the result of the ledgerinput on the [Blockchain Notary Service website](https://bns.itrustmachines.com/). For instructions on BNS operations one can go to Youtube to watch the instructional [playlist](https://youtube.com/playlist?list=PL9mBKnNjNC1K0XiH9EL65QljN6Agf4k42).
 ----
-Quickstarts is now complete. Next, learn how to build your own CMD.
+Quickstart is now complete. Next, we learn how to build our own CMD.
 
 ## Next Steps
 

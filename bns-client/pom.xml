@@ -1,6 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.itrustmachines</groupId>
@@ -20,7 +18,7 @@
     <spo-common.version>3.1.1-SNAPSHOT</spo-common.version>
 
     <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-    <lombok.version>1.18.16</lombok.version>
+    <lombok.version>1.18.22</lombok.version>
 
     <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
     <okhttp.version>4.9.0</okhttp.version>
@@ -107,12 +105,12 @@
   <repositories>
     <repository>
       <id>kuro-nexus-releases</id>
-      <url>http://itm-kuro.itm.monster:8081/repository/maven-releases</url>
+      <url>https://itm-registry.itm.monster:8281/repository/maven-releases</url>
     </repository>
 
     <repository>
       <id>kuro-nexus-snapshots</id>
-      <url>http://itm-kuro.itm.monster:8081/repository/maven-snapshots</url>
+      <url>https://itm-registry.itm.monster:8281/repository/maven-snapshots</url>
     </repository>
   </repositories>
 

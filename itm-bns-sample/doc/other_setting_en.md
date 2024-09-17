@@ -2,7 +2,7 @@
 
 ### About the Setting of BNS Client
 
-To let the BNS Client operates more flexible, we allow developers to configure some settings in BNS Client. In this document, We are going to guide you all the setting in BNS Client and help you to configure the setting to meet your demanding.
+To let the BNS Client operations more flexible, we allow developers to configure some settings in the BNS Client. In this document, we are going to guide you to all the setting in BNS Client and help you to configure the setting to meet your demands.
 
 ### Prerequisites
 
@@ -41,7 +41,7 @@ There are 5 settings in Main Sample Code and 3 settings in configuration files
 
 #### JDBC_URL
 
-In example code, we use database to store the receipt. You can change the path or name of database in here. The default database name is BnsDevice.db
+In the example code, we use the database to store the receipt. You can change the path or name of the database in here. The default database name is BnsDevice.db
 
 - The settings of `JDBC_URL`, pleaser refer to [BnsClientSample.java](../src/main/java/com/itrustmachines/sample/BnsClientSample.java)
 
@@ -61,7 +61,7 @@ You can set the delay time of each ledgerInput. The default time is 3 millisecon
 
 #### PROP_PATH_LIST
 
-BNS Client will use `PROP_PATH_LIST` to find the configuration file. If you store configuration file in other path, please remember to change the setting of `PROP_PATH_LIST` to ensure BNS Client can find your configuration file
+BNS Client will use `PROP_PATH_LIST` to find the configuration file. If you store configuration file in other path, please remember to change the setting of `PROP_PATH_LIST` to ensure BNS Client can find your configuration file.
 
 - The settings of `PROP_PATH_LIST`, pleaser refer to [BnsClientSample.java](../src/main/java/com/itrustmachines/sample/BnsClientSample.java)
 
@@ -72,7 +72,7 @@ BNS Client will use `PROP_PATH_LIST` to find the configuration file. If you stor
 
 ### Configuration File Settings
 
-To change the following setting, please refer to configuration file, [sample.properties](../src/main/resources/sample.properties)
+To change the following setting, please refer to the configuration file, [sample.properties](../src/main/resources/sample.properties)
 
 #### verifyBatchSize
 
@@ -84,7 +84,7 @@ To change the following setting, please refer to configuration file, [sample.pro
 
 #### RetryDelaySec
 
-BNS Client will delay second when the count of resend the request meet the maximum resend count. `RetryDelaySec` can set the delay second when BNS Client meet the maximum resend count.
+Seconds the BNS Client will delay when the count of resend of the request meet the maximum resend count. `RetryDelaySec` can set the delay seconds when BNS Client meets the maximum resend count.
 
 ----
 Tutorials are now complete. Next, you can explore the overview of BNS Client

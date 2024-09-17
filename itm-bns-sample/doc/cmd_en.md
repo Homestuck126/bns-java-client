@@ -2,7 +2,7 @@
 
 ### About the CMD
 
-CMD is a data you want to attest to blockchain by BNS Server. CMD is also part of ledgerinput. BNS Java Client send the ledgerinput to BNS Server and BNS Server will automatically upload the fingerprint of ledgerinput to blockchain. The developers should build your own CMD so that you can use our BNS service. There are two scenarios to build the CMD:
+CMD is the data you want to attest to blockchain by BNS Server. CMD is also part of ledgerinput. The BNS Java Client sends the ledgerinput to the BNS Server and the BNS Server will automatically upload the fingerprint of the ledgerinput to the blockchain. Developers should build their own CMD so that they can use our BNS service. There are two scenarios to build the CMD:
 
 1. [Text Attestation](#text-attestation) : Learn how to build CMD in JSON data type.
 
@@ -14,7 +14,7 @@ CMD is a data you want to attest to blockchain by BNS Server. CMD is also part o
 
 ### Suggestion
 
-- We highly recommend that you build the CMD in JSON data type
+- We highly recommend that you build the CMD as a JSON data type.
 
 ### Text Attestation
 
@@ -52,11 +52,11 @@ CMD is a data you want to attest to blockchain by BNS Server. CMD is also part o
   cmdJson = new Gson().toJson(cmd);
   ```
 
-- Now, you can implement your own CMD in [Cmd.java](../src/main/java/com/itrustmachines/sample/Cmd.java) and [BnsClientSample.java](../src/main/java/com/itrustmachines/sample/BnsClientSample.java). Then, follow the instructions in quickstarts document to execute the program. We highly recommend that you keep checking the ledgerinput result on [BNS Website](https://azure-dev-membership.itm.monster/).
+- Now, you can implement your own CMD in [Cmd.java](../src/main/java/com/itrustmachines/sample/Cmd.java) and [BnsClientSample.java](../src/main/java/com/itrustmachines/sample/BnsClientSample.java). Then, follow the instructions in the quickstarts document to execute the program. We highly recommend that you keep checking the ledgerinput result on the [BNS Website](https://bns.itrustmachines.com/).
 
 ### File Attestation
 #### Example
-If we want to attest the file, we need to convert the file contents into CMD and send to BNS Server.
+If we want to attest the file, we need to convert the file contents into CMD and send it to the BNS Server.
 
 - [CmdBinary.java](../src/main/java/com/itrustmachines/sample/CmdBinary.java)
 
@@ -91,8 +91,8 @@ If we want to attest the file, we need to convert the file contents into CMD and
   cmdJson = new Gson().toJson(cmdBinary);
   ```
 
-1. Follow the instructions in quickstart document and execute the code with `java -jar ./target/itm-bns-sample-1.1.1-SNAPSHOT.jar --file {filepath}`
-2. Go to [BNS Website](https://azure-dev-membership.itm.monster/) to check the ledgerinput result
+1. Follow the instructions in the quickstart document and execute the code with `java -jar ./target/itm-bns-sample-1.1.1-SNAPSHOT.jar --file {filepath}`
+2. Go to [BNS Website](https://bns.itrustmachines.com/) to check the ledgerinput result
 
 ----
 Build the CMD document is now complete. Next, learn how to build the Callback Applications
